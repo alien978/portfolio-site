@@ -10,9 +10,9 @@ body {
   line-height: 1.6;
   background: #fff;
   color: #111;
+  padding: 20px;
 }
 
-/* ==== SECTIONS ==== */
 section {
   padding: 60px 20px;
   max-width: 900px;
@@ -20,46 +20,46 @@ section {
 }
 
 h1, h2, h3 {
-  margin-bottom: 15px;
   font-family: 'Playfair Display', serif;
-  font-weight: 700;
+  margin-bottom: 15px;
 }
 
-/* Hero */
+/* ==== HERO ==== */
 #hero {
   text-align: center;
   padding: 100px 20px;
-  background: #EDE9FE; /* pastel lavender */
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
-/* About */
-#about {
-  background: #ECFDF5; /* pastel mint */
+/* ==== PROJECTS ==== */
+.project {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+.project:hover {
+  transform: translateY(-3px);
 }
 
-/* Skills */
-#skills {
-  background: #FFF7ED; /* pastel peach */
+/* ==== LINKS ==== */
+a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  color: #4F46E5; /* indigo pop */
+  text-decoration: underline;
 }
 
-/* Projects */
-#projects {
-  background: #EFF6FF; /* pastel blue */
-}
-
-/* Education */
-#education {
-  background: #F9FAFB; /* pastel gray */
-}
-
-/* Contact */
+/* ==== CONTACT ==== */
 #contact {
   text-align: center;
-  background: #FEF2F2; /* pastel pink */
-}
-#contact .icons {
-  margin-top: 20px;
+  margin-top: 60px;
+  padding: 40px;
+  border-top: 1px solid #ddd;
 }
 
 #contact .icons a {
@@ -69,18 +69,7 @@ h1, h2, h3 {
   transition: color 0.3s ease;
 }
 
-#contact .icons a:hover {
-  color: #4F46E5; /* accent pop */
-}
-
-
-/* Links */
-a {
-  color: #4F46E5;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
-}
+/* Hover color pops */
+#contact .icons a:nth-child(1):hover { color: #DC2626; } /* email → red */
+#contact .icons a:nth-child(2):hover { color: #4F46E5; } /* GitHub → indigo */
+#contact .icons a:nth-child(3):hover { color: #14B8A6; } /* LinkedIn → teal */
