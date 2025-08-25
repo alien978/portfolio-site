@@ -126,18 +126,7 @@ a:hover {
   color: #4F46E5; /* indigo */
   text-decoration: underline;
 }
-/* ==== footer ==== */
-#footer {
-  background: #f8f8f8;
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid #ddd;
-}
 
-#footer p {
-  margin: 0;
-  color: #666;
-}
 
 /* ==== CONTACT ==== */
 #contact .icons {
@@ -159,3 +148,16 @@ a:hover {
 #contact .icons a:nth-child(1):hover { color: #DC2626; } /* email → red */
 #contact .icons a:nth-child(2):hover { color: #4F46E5; } /* GitHub → indigo */
 #contact .icons a:nth-child(3):hover { color: #14B8A6; } /* LinkedIn → teal */
+
+/* ==== footer ==== */
+#footer {
+  background: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+#footer p {
+  margin: 0;
+  color: #666;
+}
