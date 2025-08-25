@@ -58,6 +58,21 @@ h1, h2, h3 {
   text-align: center;
   background: #FEF2F2; /* pastel pink */
 }
+#contact .icons {
+  margin-top: 20px;
+}
+
+#contact .icons a {
+  font-size: 2rem;
+  margin: 0 15px;
+  color: #111;
+  transition: color 0.3s ease;
+}
+
+#contact .icons a:hover {
+  color: #4F46E5; /* accent pop */
+}
+
 
 /* Links */
 a {
