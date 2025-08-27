@@ -115,6 +115,17 @@ p {
   margin-bottom: 10px;
 }
 
+/* ==== RESPONSIVE LAYOUT ==== */
+@media (min-width: 768px) {
+  #projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+
+
 /* ==== LINKS ==== */
 a {
   color: #111;
@@ -129,6 +140,11 @@ a:hover {
 
 
 /* ==== CONTACT ==== */
+
+#contact{
+  background: #f8f8f8;
+}
+
 #contact .icons {
   margin-top: 20px;
 }
