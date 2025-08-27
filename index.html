@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
 </head>
 <body>
 
@@ -20,7 +23,7 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="content">
+    <div class="content" data-aos="fade-up">
       <h1>Hi, I'm Alka Gurung</h1>
       <p>3rd-year BSc IT Student | Exploring QA, Web Development, and Creative Coding</p>
       <a href="Alka_Gurung_Resume.pdf" class="btn" target="_blank" rel="noopener noreferrer">View Resume</a>
@@ -29,7 +32,7 @@
 
   <!-- About Section -->
   <section id="about">
-    <div class="content">
+    <div class="content" data-aos="zoom-in">
       <h2>About Me</h2>
       <p>
         I’m a Computer Systems Engineering student from Nepal, passionate about building and testing 
@@ -43,7 +46,7 @@
 
   <!-- Projects Section -->
   <section id="projects">
-    <div class="content">
+    <div class="content" data-aos="fade-right">
       <h2>Projects</h2>
 
       <div class="projects-grid">
@@ -95,6 +98,16 @@
       window.scrollTo(0, 0);
     };
   </script>
+
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    once: true      // animation runs once, not every scroll
+  });
+</script>
+
 
 </body>
 </html>
