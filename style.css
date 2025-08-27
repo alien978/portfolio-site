@@ -39,6 +39,82 @@ body {
   color: #4F46E5; /* indigo accent */
 }
 
+/*==== SIDE BOOKMARK NAV ====*/
+#side-nav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+#side-nav a {
+  display: flex;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 12px;
+  margin: 4px 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  width: 50px; /* collapsed width */
+  overflow: hidden;
+} 
+
+#side-nav a span {
+  margin-left: 10px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#side-nav a:hover {
+  width: 150px; /* expands */
+  background: #4F46E5; /* indigo accent */
+}
+
+#side-nav a:hover span {
+  opacity: 1;
+}
+
+/* Individual hover colors */
+#side-nav a:nth-child(1):hover { background: #4F46E5; } /* Home → indigo */
+#side-nav a:nth-child(2):hover { background: #14B8A6; } /* About → teal */
+#side-nav a:nth-child(3):hover { background: #DC2626; } /* Projects → red */
+#side-nav a:nth-child(4):hover { background: #F59E0B; } /* Contact → amber */
+
+/* Mobile responsive: collapse to bottom bar */ 
+@media (max-width: 768px) {
+  #side-nav {
+    flex-direction: row;
+    bottom: 0;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #side-nav a {
+    width: auto;
+    border-radius: 0;
+    flex: 1;
+    justify-content: center;
+    font-size: 1.5rem;
+  }
+
+  #side-nav a span {
+    display: none;
+  }
+}
+
 /* ==== SECTIONS ==== */
 section {
   min-height: 100vh; /* full screen */
@@ -115,14 +191,20 @@ p {
   margin-bottom: 10px;
 }
 
-/* ==== RESPONSIVE LAYOUT ==== */
+
+/* ==== RESPONSIVE PROJECT GRID ==== */
+.projects-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* On tablets/desktops: show two side-by-side */
 @media (min-width: 768px) {
-  #projects .projects-grid {
-    display: grid;
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 }
+
 
 
 

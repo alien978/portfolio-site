@@ -10,13 +10,13 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="main-nav">
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- Side Bookmark Navigation -->
+<nav id="side-nav">
+  <a href="#hero" title="Home"><i class="fas fa-home"></i><span>Home</span></a>
+  <a href="#about" title="About"><i class="fas fa-user"></i><span>About</span></a>
+  <a href="#projects" title="Projects"><i class="fas fa-code"></i><span>Projects</span></a>
+  <a href="#contact" title="Contact"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
 
   <!-- Hero Section -->
   <section id="hero">
@@ -46,26 +46,29 @@
     <div class="content">
       <h2>Projects</h2>
 
-      <div class="project">
-        <h3>Captured Moments Photography Website</h3>
-        <p>
-          A photography portfolio website built using HTML, CSS, JS, and PHP with MySQL. 
-          Includes tested features such as navigation, image rendering, form validation, 
-          and database integration. 
-        </p>
-        <p><a href="https://github.com/alien978/capture_moments" target="_blank" rel="noopener noreferrer">Captured Moments</a></p>
-      </div>
+      <div class="projects-grid">
 
-      <div class="project">
-        <h3>Web-Job-Portal Application</h3>
-        <p>
-          A job portal developed with Node.js, Express.js, EJS, and SQL. 
-          Features role-based dashboards and tested workflows including login, job posting, 
-          and applications with manual and API testing.
-        </p>
-        <p><a href="https://github.com/alien978/Web-Job-portal" target="_blank" rel="noopener noreferrer">Web-Job-Portal</a></p>
-      </div>
+        <div class="project">
+          <h3>Captured Moments Photography Website</h3>
+          <p>
+            A photography portfolio website built using HTML, CSS, JS, and PHP with MySQL. 
+            Includes tested features such as navigation, image rendering, form validation, 
+            and database integration. 
+          </p>
+          <p><a href="https://github.com/alien978/capture_moments" target="_blank" rel="noopener noreferrer">Captured Moments</a></p>
+        </div>
 
+        <div class="project">
+          <h3>Web-Job-Portal Application</h3>
+          <p>
+            A job portal developed with Node.js, Express.js, EJS, and SQL. 
+            Features role-based dashboards and tested workflows including login, job posting, 
+            and applications with manual and API testing.
+          </p>
+          <p><a href="https://github.com/alien978/Web-Job-portal" target="_blank" rel="noopener noreferrer">Web-Job-Portal</a></p>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -80,10 +83,18 @@
       </div>
     </div>
   </section>
-  <footer id="footer">
-  <p>© 2025 Alka Gurung. All rights reserved.</p>
-</footer>
 
+  <!-- Footer -->
+  <footer id="footer">
+    <p>© 2025 Alka Gurung. All rights reserved.</p>
+  </footer>
+
+  <!-- Force reload from top -->
+  <script>
+    window.onload = function() {
+      window.scrollTo(0, 0);
+    };
+  </script>
 
 </body>
 </html>
