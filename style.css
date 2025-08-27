@@ -88,32 +88,41 @@ body {
 #side-nav a:nth-child(3):hover { background: #DC2626; } /* Projects → red */
 #side-nav a:nth-child(4):hover { background: #F59E0B; } /* Contact → amber */
 
-/* Mobile responsive: collapse to bottom bar */ 
+/* Mobile responsive: top-right horizontal nav */
 @media (max-width: 768px) {
   #side-nav {
-    flex-direction: row;
-    bottom: 0;
-    top: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    border-top: 1px solid #ddd;
-    width: 100%;
-    justify-content: space-around;
+    top: 10px;
+    right: 10px;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    flex-direction: row;  /* arrange horizontally */
+    background: none;
+    border: none;
   }
 
   #side-nav a {
-    width: auto;
-    border-radius: 0;
-    flex: 1;
+    width: 45px;   /* same box shape */
+    height: 45px;
+    margin: 0 4px;
+    border-radius: 6px; /* keep rectangle corners */
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    background: #111;
+    color: #fff;
   }
 
   #side-nav a span {
-    display: none;
+    display: none; /* hide labels, show only icons */
+  }
+
+  #side-nav a:hover {
+    width: 45px; /* no expand on hover */
+    background: #4F46E5;
   }
 }
+
+
 
 /* ==== SECTIONS ==== */
 section {
@@ -152,6 +161,34 @@ p {
   font-size: 1.2rem;
   color: #555;
   margin-top: 10px;
+}
+
+/* Hero container split left/right */
+#hero .hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+#hero .hero-left,
+#hero .hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-art {
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.side-caption {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #555;
 }
 
 /* Resume Button */
